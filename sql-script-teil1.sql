@@ -222,11 +222,11 @@ END;
 	ausgibt
 */
 
-DO (IN in_id INT => ?)
+DO (IN iv_id INT => ?)
 BEGIN
-	SELECT *
+	SELECT lastname || ', ' || firstname AS name
 	FROM "SYSTEM"."BP" AS bp
-	WHERE bp.id = in_id;
+	WHERE bp.id = iv_id;
 END;
 
 
